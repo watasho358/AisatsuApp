@@ -35,14 +35,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                        Log.d("UI-PARTS", String.valueOf(hourOfDay) + ":" + String.valueOf(minute));
-                        if (hourOfDay >= 2 && hourOfDay <= 9 && minute >= 0 && minute <= 59) {
+                        if (hourOfDay >= 2 && hourOfDay <= 9) {
                             TextView textView = findViewById(R.id.textView);
                             textView.setText("おはよう");
-                        } else if (hourOfDay >= 10 && hourOfDay <= 17 && minute >= 0 && minute <= 59) {
+                        } else if (hourOfDay >= 10 && hourOfDay <= 17) {
                             TextView textView = findViewById(R.id.textView);
                             textView.setText("こんにちは");
-                        } else if (hourOfDay >= 18 && hourOfDay <= 23 && minute >= 0 && minute <= 59) {
+                        } else {
                             TextView textView = findViewById(R.id.textView);
                             textView.setText("こんばんは");
                         }
